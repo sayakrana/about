@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sayak Rana · Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1220;
+      --card:#151833;
+      --muted:#8f98b3;
+      --text:#e7ebff;
+      --accent:#7c5cff;
+      --accent-2:#35e0a1;
+      --border:rgba(255,255,255,0.08);
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:radial-gradient(1200px 800px at 10% -10%, rgba(124,92,255,.25), transparent 60%),radial-gradient(1000px 600px at 110% 10%, rgba(53,224,161,.20), transparent 50%), var(--bg); color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:28px}
+    header.hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); box-shadow:var(--shadow); border-radius:var(--radius);}
+    .hero .intro{padding:28px 32px}
+    .tag{display:inline-block; padding:6px 12px; border-radius:999px; border:1px solid var(--border); background:rgba(124,92,255,.1); color:#dcd6ff; font-weight:600; letter-spacing:.3px}
+    h1{font-size:40px; line-height:1.1; margin:16px 0 8px}
+    .subtitle{color:var(--muted); font-size:16px}
+    .cta{margin-top:18px; display:flex; flex-wrap:wrap; gap:12px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); font-weight:600}
+    .btn.primary{background:linear-gradient(135deg, var(--accent), #5f3dff); border:none}
+    .btn:hover{transform:translateY(-1px)}
+    .statbar{display:flex; gap:18px; margin-top:16px; color:var(--muted); font-size:14px}
+    .grid{display:grid; gap:24px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    section{margin-top:28px}
+    .section-title{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px; padding:14px 18px; border-bottom:1px solid var(--border)}
+    .section-body{padding:18px}
+    .skill-list{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,.03); color:#d9e0ff; font-weight:600; font-size:14px}
+    .exp-item,.proj-item{padding:16px; border:1px solid var(--border); border-radius:14px; background:rgba(255,255,255,.03)}
+    .exp-item h3,.proj-item h3{margin:0 0 6px; font-size:18px}
+    .meta{color:var(--muted); font-size:14px; margin-bottom:10px}
+    ul{margin:0; padding-left:18px}
+    footer{margin:40px 0 12px; text-align:center; color:var(--muted); font-size:14px}
+    @media (max-width:900px){
+      header.hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="card intro">
+        <span class="tag">Available for opportunities</span>
+        <h1>Sayak Rana</h1>
+        <div class="subtitle">Full Stack Developer · Kolkata, India</div>
+        <div class="statbar">
+          <div>6+ years experience</div>
+          <div>Payments · APIs · Performance</div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#resume" title="Scroll to resume">View Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/sayak-rana26/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/sayakrana" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:rana.sayak@gmail.com">Email Me</a>
+        </div>
+      </div>
+      <div class="card" style="padding:0; overflow:hidden">
+        <svg viewBox="0 0 600 400" width="100%" height="100%" role="img" aria-label="Decorative art">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stop-color="#7c5cff"/>
+              <stop offset="100%" stop-color="#35e0a1"/>
+            </linearGradient>
+            <radialGradient id="g2" cx="50%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="rgba(255,255,255,.25)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+          <rect width="600" height="400" fill="#12152b"/>
+          <circle cx="500" cy="-10" r="160" fill="url(#g2)"/>
+          <g transform="translate(70,60)">
+            <path d="M0,120 C80,-20 220,260 300,100 S520,200 520,120" fill="none" stroke="url(#g1)" stroke-width="6"/>
+            <path d="M20,220 C120,60 260,340 340,140 S560,280 560,210" fill="none" stroke="rgba(124,92,255,.35)" stroke-width="2"/>
+            <path d="M-20,180 C60,20 200,300 280,120 S500,250 580,180" fill="none" stroke="rgba(53,224,161,.35)" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </header>
+    <section class="card" id="skills">
+      <div class="section-title">Core Skills</div>
+      <div class="section-body">
+        <div class="skill-list">
+          <span class="chip">PHP</span>
+          <span class="chip">CodeIgniter</span>
+          <span class="chip">Python</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">jQuery</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Payment Gateway Integration</span>
+          <span class="chip">Performance Optimization</span>
+          <span class="chip">Git</span>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-2" id="resume">
+      <div class="card">
+        <div class="section-title">Experience</div>
+        <div class="section-body">
+          <div class="exp-item">
+            <h3>Full Stack Developer · Astra Infotech</h3>
+            <div class="meta">2022 – Present · Kolkata, India</div>
+            <ul>
+              <li>Develop and maintain full‑stack web apps with PHP (CodeIgniter), Python and JavaScript.</li>
+              <li>Integrate third‑party payments: Stripe, PayPal, Square, Razorpay, and ICICI Bank gateways.</li>
+              <li>Design REST APIs, optimize MySQL queries, and improve app performance and scalability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-title">Selected Projects</div>
+        <div class="section-body">
+          <div class="proj-item">
+            <h3>Unified Payments Layer</h3>
+            <div class="meta">Stripe · PayPal · Square · Razorpay · ICICI</div>
+            <ul>
+              <li>Built a modular gateway abstraction to switch providers with minimal code changes.</li>
+              <li>Implemented secure tokenization, webhooks, and idempotent retry logic.</li>
+              <li>Reduced average checkout time and improved transaction reliability.</li>
+            </ul>
+          </div>
+          <div class="proj-item">
+            <h3>Internal Ops Console</h3>
+            <div class="meta">CodeIgniter · MySQL · jQuery</div>
+            <ul>
+              <li>Admin console for order monitoring, refunds, and reconciliation with role‑based access.</li>
+              <li>Optimized heavy reports with indexed queries and server‑side pagination.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-3">
+      <div class="card">
+        <div class="section-title">Education</div>
+        <div class="section-body">
+          <div class="exp-item">
+            <h3>B.Tech · B.P.U.T</h3>
+            <div class="meta">2013</div>
+            <p>Computer Science & Engineering (details editable).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-title">About</div>
+        <div class="section-body">
+          <p>Full‑stack engineer focused on clean architecture, resilient API design, and smooth payment experiences. Enjoys collaborating with product and design to ship features that matter.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-title">Contact</div>
+        <div class="section-body">
+          <p>Email: <a href="mailto:rana.sayak@gmail.com">rana.sayak@gmail.com</a><br>
+             Phone: <a href="tel:+919831640448">+91 98316 40448</a><br>
+             Location: Kolkata, India</p>
+          <div class="cta">
+            <a class="btn" href="https://www.linkedin.com/in/sayak-rana26/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/sayakrana" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      © <span id="y"></span> Sayak Rana. Built with pure HTML/CSS. 
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
